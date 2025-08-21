@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "g3mMoLA6Ku0=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mluca\\source\\repos\\ACME\\ACME.Core\\ACME.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mluca\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.8\\microsoft.extensions.dependencyinjection.abstractions.9.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

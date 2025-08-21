@@ -1,0 +1,12 @@
+C:\Users\mluca\source\repos\ACME\ACME.Core\bin\Debug\net9.0\ACME.Core.deps.json
+C:\Users\mluca\source\repos\ACME\ACME.Core\bin\Debug\net9.0\ACME.Core.dll
+C:\Users\mluca\source\repos\ACME\ACME.Core\bin\Debug\net9.0\ACME.Core.pdb
+C:\Users\mluca\source\repos\ACME\ACME.Core\obj\Debug\net9.0\ACME.Core.csproj.AssemblyReference.cache
+C:\Users\mluca\source\repos\ACME\ACME.Core\obj\Debug\net9.0\ACME.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mluca\source\repos\ACME\ACME.Core\obj\Debug\net9.0\ACME.Core.AssemblyInfoInputs.cache
+C:\Users\mluca\source\repos\ACME\ACME.Core\obj\Debug\net9.0\ACME.Core.AssemblyInfo.cs
+C:\Users\mluca\source\repos\ACME\ACME.Core\obj\Debug\net9.0\ACME.Core.csproj.CoreCompileInputs.cache
+C:\Users\mluca\source\repos\ACME\ACME.Core\obj\Debug\net9.0\ACME.Core.dll
+C:\Users\mluca\source\repos\ACME\ACME.Core\obj\Debug\net9.0\refint\ACME.Core.dll
+C:\Users\mluca\source\repos\ACME\ACME.Core\obj\Debug\net9.0\ACME.Core.pdb
+C:\Users\mluca\source\repos\ACME\ACME.Core\obj\Debug\net9.0\ref\ACME.Core.dll
