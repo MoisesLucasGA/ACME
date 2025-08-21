@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using ACME.Application.Services;
 using ACME.Core.Models;
+using ACME.Core.Requests;
+using ACME.Core.Results;
 using ACME.Infrastructure.Data;
-using ACME.Application.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ACME.API.Controllers
 {
@@ -21,87 +22,63 @@ namespace ACME.API.Controllers
 
         // GET: api/Patients
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Patient>>> GetAllPatients()
+        public async Task<ActionResult<IEnumerable<Patient>>> GetAllPatients([FromQuery] GetPatientsRequest getPatientsRequest)
         {
-            IEnumerable<Patient> patients = await _iPatientService.GetPatients();
-            return patients.ToList();
-        }
+            IEnumerable<Patient> patients = await _iPatientService.GetPatients(getPatientsRequest);
 
-        // GET: api/Patients/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Patient>> GetPatient(int id)
-        {
-            var patient = await _context.Patients.FindAsync(id);
-
-            if (patient == null)
+            BaseResult result = new BaseResult()
             {
-                return NotFound();
-            }
+                code = 200,
+                data = patients
+            };
 
-            return patient;
+            return Ok(result);
         }
 
         // PUT: api/Patients/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutPatient(int id, Patient patient)
+        public async Task<IActionResult> PutPatient(int id, [FromBody] Patient patient)
         {
-            if (id != patient.PatientId)
-            {
-                return BadRequest();
-            }
+            var response = await _iPatientService.Update(id, patient);
 
-            _context.Entry(patient).State = EntityState.Modified;
-
-            try
+            BaseResult result = new BaseResult()
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!PatientExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+                code = 200,
+                data = response
+            };
 
-            return NoContent();
+            return Ok(result);
         }
 
         // POST: api/Patients
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Patient>> PostPatient(Patient patient)
+        public async Task<ActionResult<Patient>> PostPatient([FromBody] Patient patient)
         {
-            _context.Patients.Add(patient);
-            await _context.SaveChangesAsync();
+            var response = await _iPatientService.save(patient);
 
-            return CreatedAtAction("GetPatient", new { id = patient.PatientId }, patient);
-        }
-
-        // DELETE: api/Patients/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeletePatient(int id)
-        {
-            var patient = await _context.Patients.FindAsync(id);
-            if (patient == null)
+            BaseResult result = new BaseResult()
             {
-                return NotFound();
-            }
+                code = 200,
+                data = response
+            };
 
-            _context.Patients.Remove(patient);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            return Ok(result);
         }
 
-        private bool PatientExists(int id)
+        [HttpPut("inactivate")]
+        public async Task<IActionResult> Inactivate([FromQuery] int id)
         {
-            return _context.Patients.Any(e => e.PatientId == id);
+            var response = await _iPatientService.Inactivate(id);
+
+            BaseResult result = new BaseResult()
+            {
+                code = 200,
+                data = response
+            };
+
+            return Ok(result);
         }
     }
 }

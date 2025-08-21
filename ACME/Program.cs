@@ -1,4 +1,5 @@
 using ACME.API;
+using ACME.API.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,8 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddAppDI();
 
+builder.Services.AddTransient<MyExceptionHandler>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -17,6 +20,7 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+app.UseMiddleware<MyExceptionHandler>();
 
 app.UseHttpsRedirection();
 

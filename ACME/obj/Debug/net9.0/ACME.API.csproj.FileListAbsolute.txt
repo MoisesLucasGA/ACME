@@ -275,3 +275,4 @@ C:\Users\mluca\source\repos\ACME\ACME\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis
 C:\Users\mluca\source\repos\ACME\ACME\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\mluca\source\repos\ACME\ACME\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\mluca\source\repos\ACME\ACME\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\mluca\source\repos\ACME\ACME\obj\Debug\net9.0\ACME.API.sourcelink.json

@@ -15,3 +15,4 @@ C:\Users\mluca\source\repos\ACME\ACME.Application\obj\Debug\net9.0\ACME.Applicat
 C:\Users\mluca\source\repos\ACME\ACME.Application\obj\Debug\net9.0\ref\ACME.Application.dll
 C:\Users\mluca\source\repos\ACME\ACME.Application\bin\Debug\net9.0\ACME.Infrastructure.dll
 C:\Users\mluca\source\repos\ACME\ACME.Application\bin\Debug\net9.0\ACME.Infrastructure.pdb
+C:\Users\mluca\source\repos\ACME\ACME.Application\obj\Debug\net9.0\ACME.Application.sourcelink.json
