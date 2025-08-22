@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ACME.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+468a2bb8a214135a99f88434ba9753a6f19c72fa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c68dd39e8c03a41b979a1dc2e49a72d1c51d853")]
 [assembly: System.Reflection.AssemblyProductAttribute("ACME.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ACME.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

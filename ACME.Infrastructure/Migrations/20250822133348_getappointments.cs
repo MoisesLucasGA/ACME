@@ -34,7 +34,7 @@ FROM [dbo].Appointments AS A
     AND
         (@paramStatus IS NULL OR A.Status = @paramStatus)
     AND
-        (@paramPatientId IS NULL OR A.PatientId = @paramStatus);
+        (@paramPatientId IS NULL OR A.PatientId = @paramPatientId);
 END;
 GO
              ";

@@ -13,6 +13,18 @@ builder.Services.AddAppDI();
 
 builder.Services.AddTransient<MyExceptionHandler>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:5173") // URL do seu frontend
+                  .AllowAnyHeader()
+                  .AllowAnyMethod()
+                  .AllowCredentials();
+        });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -23,6 +35,8 @@ if (app.Environment.IsDevelopment())
 app.UseMiddleware<MyExceptionHandler>();
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowFrontend");
 
 app.UseAuthorization();
 
