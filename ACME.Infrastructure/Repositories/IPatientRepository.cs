@@ -10,6 +10,5 @@ namespace ACME.Infrastructure.Repositories
         bool PatientExists(int id);
         Task<Patient> Update(Patient patient);
         Task<Patient> GetPatientById(int id);
-        Task<bool> Inactivate(Patient patient);
     }
 }

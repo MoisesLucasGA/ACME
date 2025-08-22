@@ -56,7 +56,7 @@ namespace ACME.API.Controllers
         [HttpPost]
         public async Task<ActionResult<Patient>> PostPatient([FromBody] Patient patient)
         {
-            var response = await _iPatientService.save(patient);
+            var response = await _iPatientService.Save(patient);
 
             BaseResult result = new BaseResult()
             {

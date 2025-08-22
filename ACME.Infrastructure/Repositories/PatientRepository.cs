@@ -41,16 +41,5 @@ namespace ACME.Infrastructure.Repositories
             var patient = await dBContext.Patients.FindAsync(id);
             return patient;
         }
-
-        public async Task<bool> Inactivate(Patient patient)
-        {
-
-            dBContext.Entry(patient).State = EntityState.Modified;
-
-            await dBContext.SaveChangesAsync();
-
-            return true;
-
-        }
     }
 }

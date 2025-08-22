@@ -20,6 +20,7 @@ namespace ACME.Infrastructure
             });
 
             services.AddScoped<IPatientRepository, PatientRepository>();
+            services.AddScoped<IAppointmentRepository, AppointmentRepository>();
             return services;
         }
     }

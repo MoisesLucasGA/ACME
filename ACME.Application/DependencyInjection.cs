@@ -13,6 +13,7 @@ namespace ACME.Application
         public static IServiceCollection AddApplicationDI(this IServiceCollection services)
         {
             services.AddScoped<IPatientService, PatientService>();
+            services.AddScoped<IAppointmentService, AppointmentService>();
             return services;
         }
     }

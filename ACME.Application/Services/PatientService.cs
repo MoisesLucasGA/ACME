@@ -1,5 +1,6 @@
 ﻿using ACME.Core.Models;
 using ACME.Core.Requests;
+using ACME.Core.Enums;
 using ACME.Infrastructure.Repositories;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -26,7 +27,7 @@ namespace ACME.Application.Services
             return patients;
         }
 
-        public async Task<Patient> save(Patient patient)
+        public async Task<Patient> Save(Patient patient)
         {
             GetPatientsRequest req = new GetPatientsRequest
             {
@@ -55,10 +56,11 @@ namespace ACME.Application.Services
 
         public async Task<Patient> Inactivate(int id)
         {
-
             var patient = await _patientRepository.GetPatientById(id) ?? throw new Exception("Paciente não encontrado");
 
-            patient.Status = Core.Enums.PatientStatusEnum.Inactive;
+            patient.Status = patient.Status == PatientStatusEnum.Inactive
+                ? PatientStatusEnum.Active
+                : PatientStatusEnum.Inactive;
 
             return await _patientRepository.Update(patient);
         }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ACME.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+631b3f9d2601c1901c3fea911f9117bc786e5010")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+468a2bb8a214135a99f88434ba9753a6f19c72fa")]
 [assembly: System.Reflection.AssemblyProductAttribute("ACME.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ACME.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
